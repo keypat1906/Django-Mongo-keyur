@@ -28,6 +28,15 @@ class BankViewSet(viewsets.ViewSet):
         return Response(serializer.data)
 
 
+    def total_balance(self, request, pk=None):
+        bank = bank_data.objects.all()
+        total = 0
+        for object in bank:
+            if object.accounts:
+               for balance in object.accounts:
+                   if balance.account_balance:
+                      total = total + balance.account_balance
+        return Response(data=total)   
 # Create your views here.
 
 def index(request):
