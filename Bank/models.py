@@ -1,7 +1,5 @@
 from mongoengine import *
 
-# Create your models here.
-
 class account(EmbeddedDocument):
     account_type = StringField(max_length=50)
     account_balance = IntField(default=0)

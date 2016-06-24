@@ -23,10 +23,10 @@ class BankViewSet(viewsets.ViewSet):
                                                   account holders.
         """
         pipe = {"$unwind": "$accounts"}, 
-            {"$group": {"_id": "null",\
-            "sum": {"$sum": "$accounts.account_balance"}}}
+               {"$group": {"_id": "null", 
+                "sum": {"$sum": "$accounts.account_balance"}}}
         total_balance = bank_data._get_collection().aggregate(pipe)\
-             ["result"][0]["sum"]
+                        ["result"][0]["sum"]
         return Response(data=total_balance)
 
     def average_balance(self, request, pk=None):
@@ -35,8 +35,8 @@ class BankViewSet(viewsets.ViewSet):
                                            the account holders.
         """
         pipe = {"$unwind": "$accounts"},
-            {"$group": {"_id": "null",\
-            "avg": {"$avg": "$accounts.account_balance"}}}
+               {"$group": {"_id": "null",
+                "avg": {"$avg": "$accounts.account_balance"}}}
         average_balance = bank_data._get_collection().aggregate(pipe)\
-             ["result"][0]["avg"]
+                          ["result"][0]["avg"]
         return Response(data=average_balance)
