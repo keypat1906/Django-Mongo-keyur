@@ -1,19 +1,15 @@
-#from Bank.serializers import *
 from rest_framework import viewsets
 from rest_framework.response import Response
 from models import *
 import mongoengine
-#Establish a connection with mongo instance.
-
-#user = authenticate(username=username, password=password)
-#assert isinstance(user, mongoengine.django.auth.User)
-
 
 class BankViewSet(viewsets.ViewSet):
-    """
-    A simple ViewSet for listing or retrieving users.
-    """
+
+
     def list(self, request):
+        """
+        A simple ViewSet for listing or retrieving users.
+        """
         list = []
         bank = bank_data.objects(first_name__contains="JOHN")
         for object in bank:
@@ -21,23 +17,26 @@ class BankViewSet(viewsets.ViewSet):
      
         return Response(data=list)
 
-    def retrieve(self, request, pk=None):
-        queryset = Bank.objects.all()
-        #user = get_object_or_404(queryset, pk=pk)
-        serializer = BankSerializer(queryset)
-        return Response(serializer.data)
-
-
     def total_balance(self, request, pk=None):
-        bank = bank_data.objects.all()
-        total = 0
-        for object in bank:
-            if object.accounts:
-               for balance in object.accounts:
-                   if balance.account_balance:
-                      total = total + balance.account_balance
-        return Response(data=total)   
-# Create your views here.
+        """
+        A simple ViewSet for calculating total balance of all the \
+                                                  account holders.
+        """
+        pipe = {"$unwind": "$accounts"}, 
+            {"$group": {"_id": "null",\
+            "sum": {"$sum": "$accounts.account_balance"}}}
+        total_balance = bank_data._get_collection().aggregate(pipe)\
+             ["result"][0]["sum"]
+        return Response(data=total_balance)
 
-def index(request):
-    customer  = Bank.objects.all()
+    def average_balance(self, request, pk=None):
+        """
+        A simple ViewSet for calculating average balance of all \
+                                           the account holders.
+        """
+        pipe = {"$unwind": "$accounts"},
+            {"$group": {"_id": "null",\
+            "avg": {"$avg": "$accounts.account_balance"}}}
+        average_balance = bank_data._get_collection().aggregate(pipe)\
+             ["result"][0]["avg"]
+        return Response(data=average_balance)
