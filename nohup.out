@@ -1,0 +1,1647 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:23:18
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x106b95140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 33
+    total = bank_data.aggregate([ { $unwind: "$accounts" },{ $group: { _id: null, sum: { $sum: "$accounts.account_balance" }}}])
+                                    ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function wrapper at 0x1027c5140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 33
+    total = bank_data.objects.aggregate([ { $unwind: "$accounts" },{ $group: { _id: null, sum: { $sum: "$accounts.account_balance" }}}])
+                                            ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function wrapper at 0x10c46f140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 33
+    pipe = [ { $unwind: "$accounts" },{ $group: { _id: null, sum: { $sum: "$accounts.account_balance" }}}]
+               ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function wrapper at 0x103237140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 33
+    pipe = [ { "$unwind": "$accounts" },{ "$group": { _id: null, sum: { $sum: "$accounts.account_balance" }}}]
+                                                                        ^
+SyntaxError: invalid syntax
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 33, in total_balance
+    pipe = [ { "$unwind": "$accounts" },{ "$group": { _id: null, sum: { "$sum": "$accounts.account_balance" }}}]
+NameError: global name 'null' is not defined
+[23/Jun/2016 02:27:42] "GET /totalbalance/ HTTP/1.1" 500 77794
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:27:35
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 33, in total_balance
+    pipe = [ { "$unwind": "$accounts" },{ "$group": { _id: null, sum: { "$sum": "$accounts.account_balance" }}}]
+NameError: global name 'null' is not defined
+[23/Jun/2016 02:29:01] "GET /totalbalance/ HTTP/1.1" 500 77811
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:28:54
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 33, in total_balance
+    pipe = [ { "$unwind": "$accounts" },{ "$group": { _id: "null", sum: { "$sum": "$accounts.account_balance" }}}]
+NameError: global name '_id' is not defined
+[23/Jun/2016 02:29:34] "GET /totalbalance/ HTTP/1.1" 500 77828
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:29:31
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 34, in total_balance
+    total = bank_data.objects.aggregate(pipe)["sum"]
+  File "/Library/Python/2.7/site-packages/mongoengine/queryset/base.py", line 1033, in aggregate
+    return self._collection.aggregate(pipeline, cursor={}, **kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/collection.py", line 1826, in aggregate
+    "aggregate", self.__name, **command_kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/database.py", line 433, in _command
+    for doc in cursor:
+  File "/Library/Python/2.7/site-packages/pymongo/cursor.py", line 1149, in next
+    if len(self.__data) or self._refresh():
+  File "/Library/Python/2.7/site-packages/pymongo/cursor.py", line 1081, in _refresh
+    self.__codec_options.uuid_representation))
+InvalidDocument: documents must have only string keys, key was <built-in function sum>
+[23/Jun/2016 02:29:54] "GET /totalbalance/ HTTP/1.1" 500 102974
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:29:49
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 34, in total_balance
+    total = bank_data.objects.aggregate(pipe)
+  File "/Library/Python/2.7/site-packages/mongoengine/queryset/base.py", line 1033, in aggregate
+    return self._collection.aggregate(pipeline, cursor={}, **kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/collection.py", line 1826, in aggregate
+    "aggregate", self.__name, **command_kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/database.py", line 433, in _command
+    for doc in cursor:
+  File "/Library/Python/2.7/site-packages/pymongo/cursor.py", line 1149, in next
+    if len(self.__data) or self._refresh():
+  File "/Library/Python/2.7/site-packages/pymongo/cursor.py", line 1081, in _refresh
+    self.__codec_options.uuid_representation))
+InvalidDocument: documents must have only string keys, key was <built-in function sum>
+[23/Jun/2016 02:30:31] "GET /totalbalance/ HTTP/1.1" 500 102940
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:30:27
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 34, in total_balance
+    total = bank_data.objects.aggregate(pipe)
+  File "/Library/Python/2.7/site-packages/mongoengine/queryset/base.py", line 1033, in aggregate
+    return self._collection.aggregate(pipeline, cursor={}, **kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/collection.py", line 1826, in aggregate
+    "aggregate", self.__name, **command_kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/database.py", line 433, in _command
+    for doc in cursor:
+  File "/Library/Python/2.7/site-packages/pymongo/cursor.py", line 1149, in next
+    if len(self.__data) or self._refresh():
+  File "/Library/Python/2.7/site-packages/pymongo/cursor.py", line 1081, in _refresh
+    self.__codec_options.uuid_representation))
+InvalidDocument: documents must have only string keys, key was <built-in function sum>
+[23/Jun/2016 02:31:35] "GET /totalbalance/ HTTP/1.1" 500 102940
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:31:32
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 34, in total_balance
+    total = bank_data.objects.aggregate(pipe)
+  File "/Library/Python/2.7/site-packages/mongoengine/queryset/base.py", line 1033, in aggregate
+    return self._collection.aggregate(pipeline, cursor={}, **kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/collection.py", line 1826, in aggregate
+    "aggregate", self.__name, **command_kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/database.py", line 438, in _command
+    result, self.connection._disconnect, None, allowable_errors)
+  File "/Library/Python/2.7/site-packages/pymongo/helpers.py", line 213, in _check_command_response
+    raise OperationFailure(msg % errmsg, code, response)
+OperationFailure: pipeline element 0 is not an object
+[23/Jun/2016 02:33:28] "GET /totalbalance/ HTTP/1.1" 500 100384
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:33:25
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 34, in total_balance
+    total = bank_data.aggregate(pipe)
+AttributeError: type object 'bank_data' has no attribute 'aggregate'
+[23/Jun/2016 02:36:59] "GET /totalbalance/ HTTP/1.1" 500 78261
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:36:49
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x1067c5140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 42
+    return Response(data=total)   
+         ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function wrapper at 0x10989e140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 42
+    return Response(data=total)   
+         ^
+SyntaxError: invalid syntax
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 34, in total_balance
+    total = bank_data.objects.aggregate(Sum('accounts.account_balance') )
+NameError: global name 'Sum' is not defined
+[23/Jun/2016 02:43:06] "GET /totalbalance/ HTTP/1.1" 500 78108
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:43:03
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total = bank_data.objects.aggregate(Sum('accounts.account_balance') )
+  File "/Library/Python/2.7/site-packages/mongoengine/queryset/base.py", line 1033, in aggregate
+    return self._collection.aggregate(pipeline, cursor={}, **kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/collection.py", line 1826, in aggregate
+    "aggregate", self.__name, **command_kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/database.py", line 380, in _command
+    if '$out' in stage:
+TypeError: argument of type 'Sum' is not iterable
+[23/Jun/2016 02:43:40] "GET /totalbalance/ HTTP/1.1" 500 93520
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:43:35
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total = bank_data.objects.aggregate(Sum('account_balance') )
+  File "/Library/Python/2.7/site-packages/mongoengine/queryset/base.py", line 1033, in aggregate
+    return self._collection.aggregate(pipeline, cursor={}, **kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/collection.py", line 1826, in aggregate
+    "aggregate", self.__name, **command_kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/database.py", line 380, in _command
+    if '$out' in stage:
+TypeError: argument of type 'Sum' is not iterable
+[23/Jun/2016 02:44:09] "GET /totalbalance/ HTTP/1.1" 500 93457
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 02:44:06
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total = bank_data.objects.aggregate(Sum('accounts.account_balance') )
+  File "/Library/Python/2.7/site-packages/mongoengine/queryset/base.py", line 1033, in aggregate
+    return self._collection.aggregate(pipeline, cursor={}, **kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/collection.py", line 1826, in aggregate
+    "aggregate", self.__name, **command_kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/database.py", line 380, in _command
+    if '$out' in stage:
+TypeError: argument of type 'Sum' is not iterable
+[23/Jun/2016 03:02:52] "GET /totalbalance/ HTTP/1.1" 500 93520
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:02:47
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total = bank_data.objects.all().aggregate(Sum('accounts.account_balance') )
+  File "/Library/Python/2.7/site-packages/mongoengine/queryset/base.py", line 1033, in aggregate
+    return self._collection.aggregate(pipeline, cursor={}, **kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/collection.py", line 1826, in aggregate
+    "aggregate", self.__name, **command_kwargs)
+  File "/Library/Python/2.7/site-packages/pymongo/database.py", line 380, in _command
+    if '$out' in stage:
+TypeError: argument of type 'Sum' is not iterable
+[23/Jun/2016 03:14:08] "GET /totalbalance/ HTTP/1.1" 500 93532
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:14:04
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total = bank_data._get_collection().aggregate(pine )
+NameError: global name 'pine' is not defined
+[23/Jun/2016 03:18:19] "GET /totalbalance/ HTTP/1.1" 500 78065
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:18:15
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[23/Jun/2016 03:18:35] "GET /totalbalance/ HTTP/1.1" 200 74
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:18:31
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<type 'NoneType'>`
+[23/Jun/2016 03:19:21] "GET /totalbalance/ HTTP/1.1" 500 73134
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<type 'NoneType'>`
+[23/Jun/2016 03:19:42] "GET /totalbalance/ HTTP/1.1" 500 73134
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:19:18
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 468, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 396, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<type 'NoneType'>`
+[23/Jun/2016 03:19:46] "GET /totalbalance/ HTTP/1.1" 500 73134
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:19:46
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:20:07
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[23/Jun/2016 03:20:40] "GET /totalbalance/ HTTP/1.1" 200 41
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:20:35
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 34, in total_balance
+    total = bank_data._get_collection().aggregate(pipe )["result"]["sum"]
+TypeError: list indices must be integers, not str
+[23/Jun/2016 03:21:02] "GET /totalbalance/ HTTP/1.1" 500 76951
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:21:00
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 34, in total_balance
+    total = bank_data._get_collection().aggregate(pipe )["result"]["sum"]
+TypeError: list indices must be integers, not str
+[23/Jun/2016 03:21:21] "GET /totalbalance/ HTTP/1.1" 500 76951
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:21:18
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[23/Jun/2016 03:21:42] "GET /totalbalance/ HTTP/1.1" 200 39
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:21:41
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total_balance = total["sum"]
+TypeError: list indices must be integers, not str
+[23/Jun/2016 03:22:37] "GET /totalbalance/ HTTP/1.1" 500 77103
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total_balance = total["sum"]
+TypeError: list indices must be integers, not str
+[23/Jun/2016 03:22:39] "GET /totalbalance/ HTTP/1.1" 500 77103
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:22:36
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[23/Jun/2016 03:23:01] "GET /totalbalance/ HTTP/1.1" 200 41
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:23:01
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[23/Jun/2016 03:23:39] "GET /totalbalance/ HTTP/1.1" 200 41
+[23/Jun/2016 03:23:41] "GET /totalbalance/ HTTP/1.1" 200 41
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:23:38
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:24:07
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total_balance = total.sum
+AttributeError: 'list' object has no attribute 'sum'
+[23/Jun/2016 03:24:58] "GET /totalbalance/ HTTP/1.1" 500 77226
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:24:57
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total_balance = total.values
+AttributeError: 'list' object has no attribute 'values'
+[23/Jun/2016 03:25:52] "GET /totalbalance/ HTTP/1.1" 500 77253
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:25:51
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x10a264140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35
+    total_balance = 
+                   ^
+SyntaxError: invalid syntax
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total_balance = total.items()
+AttributeError: 'list' object has no attribute 'items'
+[23/Jun/2016 03:30:52] "GET /totalbalance/ HTTP/1.1" 500 77248
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    total_balance = total.items()
+AttributeError: 'list' object has no attribute 'items'
+[23/Jun/2016 03:30:54] "GET /totalbalance/ HTTP/1.1" 500 77248
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:30:48
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    dict = {k:v for k,v in (x.split(':') for x in total) }
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in <dictcomp>
+    dict = {k:v for k,v in (x.split(':') for x in total) }
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in <genexpr>
+    dict = {k:v for k,v in (x.split(':') for x in total) }
+AttributeError: 'dict' object has no attribute 'split'
+[23/Jun/2016 03:34:39] "GET /totalbalance/ HTTP/1.1" 500 84817
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in total_balance
+    dict = {k:v for k,v in (x.split(':') for x in total) }
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in <dictcomp>
+    dict = {k:v for k,v in (x.split(':') for x in total) }
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 35, in <genexpr>
+    dict = {k:v for k,v in (x.split(':') for x in total) }
+AttributeError: 'dict' object has no attribute 'split'
+[23/Jun/2016 03:34:41] "GET /totalbalance/ HTTP/1.1" 500 84817
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:34:35
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[23/Jun/2016 03:50:51] "GET /totalbalance/ HTTP/1.1" 200 41
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 23, 2016 - 03:50:48
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:17:41
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 29, in total_balance
+    total = string(bank_data._get_collection().aggregate(pipe )["result"])
+NameError: global name 'string' is not defined
+[24/Jun/2016 01:18:05] "GET /totalbalance/ HTTP/1.1" 500 76603
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:17:46
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[24/Jun/2016 01:18:21] "GET /totalbalance/ HTTP/1.1" 200 49
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:18:20
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[24/Jun/2016 01:19:03] "GET /totalbalance/ HTTP/1.1" 200 41
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:19:01
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:21:18
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 30, in total_balance
+    total_balance = ",".join(total)
+TypeError: sequence item 0: expected string, dict found
+[24/Jun/2016 01:22:14] "GET /totalbalance/ HTTP/1.1" 500 76639
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:22:10
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 30, in total_balance
+    total_balance = dict.get("sum", default=None)
+TypeError: descriptor 'get' requires a 'dict' object but received a 'str'
+[24/Jun/2016 01:26:11] "GET /totalbalance/ HTTP/1.1" 500 76970
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:26:07
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[24/Jun/2016 01:26:39] "GET /totalbalance/ HTTP/1.1" 200 39
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:26:38
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 30, in total_balance
+    total_balance = dict.get("sum", default=None)
+TypeError: descriptor 'get' requires a 'dict' object but received a 'str'
+[24/Jun/2016 01:27:27] "GET /totalbalance/ HTTP/1.1" 500 76986
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:27:23
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[24/Jun/2016 01:27:56] "GET /totalbalance/ HTTP/1.1" 200 39
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:27:53
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[24/Jun/2016 01:29:52] "GET /totalbalance/ HTTP/1.1" 200 94
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:29:50
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[24/Jun/2016 01:30:27] "GET /totalbalance/ HTTP/1.1" 200 39
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:30:26
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 30, in total_balance
+    total_balance = iast.literal_eval(bank_data._get_collection().aggregate(pipe )["result"][0])
+NameError: global name 'iast' is not defined
+[24/Jun/2016 01:31:25] "GET /totalbalance/ HTTP/1.1" 500 76668
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:31:22
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 30, in total_balance
+    total_balance = ast.literal_eval(bank_data._get_collection().aggregate(pipe )["result"][0])
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[24/Jun/2016 01:31:39] "GET /totalbalance/ HTTP/1.1" 500 84449
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:31:38
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x10ad80140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 30
+    total_balance = ast.literal_eval("bank_data._get_collection().aggregate(pipe )["result"][0]")
+                                                                                         ^
+SyntaxError: invalid syntax
+Unhandled exception in thread started by <function wrapper at 0x106976140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 30
+    total_balance = ast.literal_eval("bank_data._get_collection().aggregate(pipe )["result"][0]")
+                                                                                         ^
+SyntaxError: invalid syntax
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 31, in total_balance
+    total_balance = ast.literal_eval("total_balance")
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 80, in literal_eval
+    return _convert(node_or_string)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 79, in _convert
+    raise ValueError('malformed string')
+ValueError: malformed string
+[24/Jun/2016 01:33:24] "GET /totalbalance/ HTTP/1.1" 500 84576
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:33:21
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 31, in total_balance
+    total_balance = dict.get("sum", default=None)
+TypeError: descriptor 'get' requires a 'dict' object but received a 'str'
+[24/Jun/2016 01:33:38] "GET /totalbalance/ HTTP/1.1" 500 76986
+Internal Server Error: /totalbalance/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/viewsets.py", line 87, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Python/2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 31, in total_balance
+    total_balance = dict.get("sum", default=None)
+TypeError: descriptor 'get' requires a 'dict' object but received a 'str'
+[24/Jun/2016 01:33:40] "GET /totalbalance/ HTTP/1.1" 500 76986
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:33:37
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[24/Jun/2016 01:34:37] "GET /totalbalance/ HTTP/1.1" 200 39
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:34:35
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[24/Jun/2016 01:35:04] "GET /totalbalance/ HTTP/1.1" 200 18
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:35:03
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[24/Jun/2016 01:35:13] "GET /totalbalance/ HTTP/1.1" 200 18
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:35:11
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x104411140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 36
+    return Response(data=average_balance)`
+                                         ^
+SyntaxError: invalid syntax
+[24/Jun/2016 01:37:43] "GET /averagebalance/ HTTP/1.1" 200 16
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:37:42
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:42:01
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:42:20
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:44:17
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:44:58
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:46:32
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:50:08
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:50:49
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:52:05
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:53:08
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:53:40
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:53:44
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:54:22
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:57:17
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2016 - 01:57:43
+Django version 1.9, using settings 'Bank.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x10dfe0140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 26
+    {"$group": {"_id": "null",\
+    ^
+IndentationError: unexpected indent
+Unhandled exception in thread started by <function wrapper at 0x1023f0140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 26
+    {"$group": {"_id": "null",\
+    ^
+IndentationError: unexpected indent
+Unhandled exception in thread started by <function wrapper at 0x10294c140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 26
+    {"$group": {"_id": "null", 
+    ^
+IndentationError: unexpected indent
+Unhandled exception in thread started by <function wrapper at 0x10dfc9140>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/Library/Python/2.7/site-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/Library/Python/2.7/site-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/Library/Python/2.7/site-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/urls.py", line 18, in <module>
+    from Bank.views import *
+  File "/Users/bracelet/Django-Mongo-keyur/Bank/views.py", line 26
+    {"$group": {"_id": "null", 
+    ^
+IndentationError: unexpected indent
