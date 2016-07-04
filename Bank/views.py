@@ -22,7 +22,7 @@ class BankViewSet(viewsets.ViewSet):
         A simple ViewSet for calculating total balance of all the \
                                                   account holders.
         """
-        pipe = {"$unwind": "$accounts"}, 
+        pipe = {"$unwind": "$accounts"},\
                {"$group": {"_id": "null", 
                 "sum": {"$sum": "$accounts.account_balance"}}}
         total_balance = bank_data._get_collection().aggregate(pipe)\
@@ -34,9 +34,16 @@ class BankViewSet(viewsets.ViewSet):
         A simple ViewSet for calculating average balance of all \
                                            the account holders.
         """
-        pipe = {"$unwind": "$accounts"},
+        pipe = {"$unwind": "$accounts"},\
                {"$group": {"_id": "null",
                 "avg": {"$avg": "$accounts.account_balance"}}}
         average_balance = bank_data._get_collection().aggregate(pipe)\
                           ["result"][0]["avg"]
         return Response(data=average_balance)
+
+    def total_customers(self, request, pk=None):
+        """
+        Function to check total number of customers
+        """
+        count = bank_data._get_collection().count()
+        return Response(data=count)
